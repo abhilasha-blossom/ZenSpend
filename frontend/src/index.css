@@ -1,0 +1,20 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F7F9FB] text-[#2E4057] antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Hotfix for blocking overlays (from browser extensions or vite tools) */
+.preact-border-shadow-host {
+  pointer-events: none !important;
+  display: none !important;
+}
